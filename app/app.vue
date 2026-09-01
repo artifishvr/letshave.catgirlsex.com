@@ -1,9 +1,19 @@
-
 <script setup>
 import { ref, onMounted } from 'vue';
 
 const emojis = ref([]);
 const emojiCount = 100;
+
+useHead({
+  title: "pweaseeeeee",
+  link: [
+    {
+      rel: "icon",
+      type: "image/svg+xml",
+      href: "/1f97a.svg"
+    }
+  ]
+});
 
 onMounted(() => {
   const generatedEmojis = [];
@@ -41,8 +51,6 @@ const moreEmojis = [];
 });
 </script>
 
-
-
 <template>
   <div class="emoji-container">
     <div
@@ -59,6 +67,11 @@ const moreEmojis = [];
       <img src="/1f97a.svg" class="size-12" alt="pleading face" />
     </div>
   </div>
+
+  <div class="text-zinc-300/30 absolute bottom-10 right-10 text-right z-10"> 
+    <p>by <a href="https://arti.gay" class="text-blue-300/30 underline">arti</a></p>
+        <p><a href="https://github.com/jdecked/twemoji" class="text-blue-300/30 underline">twemoji</a> under CC-BY 4.0</p>
+  </div>
 </template>
 
 <style>
@@ -74,7 +87,7 @@ body {
   height: 100vh;
   pointer-events: none;
   overflow: hidden;
-  z-index: 9999; 
+  z-index: 0; 
 }
 
 .emoji {
@@ -90,7 +103,7 @@ body {
     opacity: 1;
   }
   100% {
-    transform: translateY(110vh) rotate(15deg);
+    transform: translateY(120vh) rotate(15deg);
     opacity: 0.2;
   }
 }
