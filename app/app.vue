@@ -12,6 +12,12 @@ useHead({
       type: "image/svg+xml",
       href: "/1f97a.svg"
     }
+  ],
+  meta: [
+    {
+      name: "description",
+      content: "🥺"
+    }
   ]
 });
 
